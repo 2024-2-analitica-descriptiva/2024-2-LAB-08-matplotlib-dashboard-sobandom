@@ -2,7 +2,8 @@
 """
 Escriba el codigo que ejecute la accion solicitada.
 """
-
+import matplotlib
+matplotlib.use('Agg')
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
@@ -104,7 +105,7 @@ def pregunta_01():
             y=df.index.values,
             width=df["mean"].values -1,
             left=df["min"].values,
-            colors=colors,
+            color=colors,
             height=0.5,
             alpha=1.0,
         )
